@@ -5,6 +5,10 @@ const app = express();
 //connect Db
 connectDB();
 
+//init middleware
+
+app.use(express.json({extend:false}));
+
 app.get('/', (req,res)=>res.send('API Running'));
 
 
